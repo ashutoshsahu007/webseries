@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 import { useMovies } from "../context/MovieProvider";
 
-/**
- * Props:
- *  initial: partial entry for edit
- *  onClose: fn
- *  isEdit: bool
- */
 export const MovieForm = ({ initial = {}, onClose, isEdit = false }) => {
   const { dispatch } = useMovies();
   const [form, setForm] = useState({

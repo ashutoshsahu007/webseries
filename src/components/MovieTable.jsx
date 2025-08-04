@@ -31,17 +31,17 @@ export const MovieTable = () => {
         </button>
       </div>
       <div className="overflow-x-auto">
-        <table className="w-full table-auto border-collapse">
-          <thead className="bg-gray-100 sticky top-0">
+        <table className="w-full table-auto border-collapse ">
+          <thead className="bg-gray-100 sticky top-0 ">
             <tr>
-              <th className="p-2 text-left">Title</th>
-              <th className="p-2 text-left">Type</th>
-              <th className="p-2 text-left">Director</th>
-              <th className="p-2 text-left">Budget</th>
-              <th className="p-2 text-left">Location</th>
-              <th className="p-2 text-left">Duration</th>
-              <th className="p-2 text-left">Year</th>
-              <th className="p-2 text-left">Actions</th>
+              <th className="p-2 text-left border-1">Title</th>
+              <th className="p-2 text-left border-1">Type</th>
+              <th className="p-2 text-left border-1">Director</th>
+              <th className="p-2 text-left border-1">Budget</th>
+              <th className="p-2 text-left border-1">Location</th>
+              <th className="p-2 text-left border-1">Duration</th>
+              <th className="p-2 text-left border-1">Year</th>
+              <th className="p-2 text-left border-1">Actions</th>
             </tr>
           </thead>
           <tbody>
@@ -53,18 +53,18 @@ export const MovieTable = () => {
                   ref={isLast ? (node) => observerRef(node) : null}
                   className="border-b hover:bg-gray-50"
                 >
-                  <td className="p-2">{entry.title}</td>
-                  <td className="p-2">{entry.type}</td>
-                  <td className="p-2">{entry.director}</td>
-                  <td className="p-2">
+                  <td className="p-2 border-1">{entry.title}</td>
+                  <td className="p-2 border-1">{entry.type}</td>
+                  <td className="p-2 border-1">{entry.director}</td>
+                  <td className="p-2 border-1">
                     {entry.budget !== undefined
                       ? `$${entry.budget.toLocaleString()}`
                       : "-"}
                   </td>
-                  <td className="p-2">{entry.location || "-"}</td>
-                  <td className="p-2">{entry.duration || "-"}</td>
-                  <td className="p-2">{entry.year || "-"}</td>
-                  <td className="p-2 flex gap-2">
+                  <td className="p-2 border-1">{entry.location || "-"}</td>
+                  <td className="p-2 border-1">{entry.duration || "-"}</td>
+                  <td className="p-2 border-1">{entry.year || "-"}</td>
+                  <td className="p-2 flex gap-2 border-1">
                     <button
                       onClick={() => setEditing(entry)}
                       className="text-sm px-2 py-1 rounded bg-yellow-200"
