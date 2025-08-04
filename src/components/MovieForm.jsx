@@ -145,13 +145,13 @@ export const MovieForm = ({ initial = {}, onClose, isEdit = false }) => {
           <button
             type="button"
             onClick={onClose}
-            className="px-4 py-2 rounded bg-gray-200"
+            className="px-4 py-2 rounded cursor-pointer bg-gray-200"
           >
             Cancel
           </button>
           <button
             type="submit"
-            className="px-4 py-2 rounded bg-indigo-600 text-white"
+            className="px-4 py-2 rounded bg-indigo-600 cursor-pointer text-white"
           >
             {isEdit ? "Save Changes" : "Add Entry"}
           </button>

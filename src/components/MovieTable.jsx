@@ -25,7 +25,7 @@ export const MovieTable = () => {
 
         <button
           onClick={() => setShowAdd(true)}
-          className="bg-green-600 text-white px-4 py-2 rounded"
+          className="bg-green-600 text-white px-4 py-2 rounded cursor-pointer"
         >
           + Add New
         </button>
@@ -51,7 +51,7 @@ export const MovieTable = () => {
                 <tr
                   key={entry.id}
                   ref={isLast ? (node) => observerRef(node) : null}
-                  className="border-b hover:bg-gray-50"
+                  className=" hover:bg-gray-50"
                 >
                   <td className="p-2 border-1">{entry.title}</td>
                   <td className="p-2 border-1">{entry.type}</td>
@@ -63,20 +63,22 @@ export const MovieTable = () => {
                   </td>
                   <td className="p-2 border-1">{entry.location || "-"}</td>
                   <td className="p-2 border-1">{entry.duration || "-"}</td>
-                  <td className="p-2 border-1">{entry.year || "-"}</td>
-                  <td className="p-2 flex gap-2 border-1">
-                    <button
-                      onClick={() => setEditing(entry)}
-                      className="text-sm px-2 py-1 rounded bg-yellow-200"
-                    >
-                      Edit
-                    </button>
-                    <button
-                      onClick={() => handleDelete(entry.id)}
-                      className="text-sm px-2 py-1 rounded bg-red-200"
-                    >
-                      Delete
-                    </button>
+                  <td className="p-2 border-1 ">{entry.year || "-"}</td>
+                  <td className="p-2 border-1">
+                    <div className="flex gap-2">
+                      <button
+                        onClick={() => setEditing(entry)}
+                        className="text-sm px-2 py-1 rounded cursor-pointer bg-yellow-200"
+                      >
+                        Edit
+                      </button>
+                      <button
+                        onClick={() => handleDelete(entry.id)}
+                        className="text-sm px-2 py-1 cursor-pointer  rounded bg-red-200"
+                      >
+                        Delete
+                      </button>
+                    </div>
                   </td>
                 </tr>
               );
